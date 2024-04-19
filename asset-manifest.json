@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/http://SottoMayor.github.io/ghp-test/static/css/main.a66dc8d7.css",
+    "main.js": "/http://SottoMayor.github.io/ghp-test/static/js/main.ac18ad48.js",
+    "static/js/787.fc4c4c13.chunk.js": "/http://SottoMayor.github.io/ghp-test/static/js/787.fc4c4c13.chunk.js",
+    "index.html": "/http://SottoMayor.github.io/ghp-test/index.html",
+    "main.a66dc8d7.css.map": "/http://SottoMayor.github.io/ghp-test/static/css/main.a66dc8d7.css.map",
+    "main.ac18ad48.js.map": "/http://SottoMayor.github.io/ghp-test/static/js/main.ac18ad48.js.map",
+    "787.fc4c4c13.chunk.js.map": "/http://SottoMayor.github.io/ghp-test/static/js/787.fc4c4c13.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a66dc8d7.css",
+    "static/js/main.ac18ad48.js"
+  ]
+}
