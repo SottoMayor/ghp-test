@@ -19,7 +19,7 @@ import RootLayout from './Pages/RootLayout';
 function App() {
 
   const routesDef = createRoutesFromElements(
-    <Route element={<RootLayout/>}>
+    <Route element={<RootLayout/>} path='/'>
       <Route path='/' element={<Home00WeBSVmenu />}/>
       <Route path='/access' element={<Home passedData=''/>}/>
       <Route path='/send-sats' element={<Page01TX />}/>
