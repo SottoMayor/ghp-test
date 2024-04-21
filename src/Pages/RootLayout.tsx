@@ -1,19 +1,27 @@
 
 
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import MainNavigation from '../components/MainNavigation';
-import { Outlet, useLocation } from 'react-router-dom';
+import { Outlet, useNavigate, useLocation } from 'react-router-dom';
 import Home00WeBSVmenu from './Home00WeBSVmenu';
+import ImgProj from '../../public/img_proj.png';
 
 const RootLayout = () => {
-  let location = useLocation();
-  console.log(location.pathname);
+  let { pathname } = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if(pathname === '/ghp-test'){
+      navigate('/');
+      return;
+    }
+  }, [pathname, navigate]);
 
   const outletReturn = (
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap' }}>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
         <div>
-          <img className='logo-maoonchain' src="/img_proj.png" alt="Logo Mao On Chain" />
+          <img className='logo-maoonchain' src={ImgProj} alt="Logo Mao On Chain" />
         </div>
       </div>
       
@@ -21,7 +29,7 @@ const RootLayout = () => {
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
           <div>
-            <img className='logo-maoonchain' src="/img_proj.png" alt="Logo Mao On Chain" />
+            <img className='logo-maoonchain' src={ImgProj} alt="Logo Mao On Chain" />
           </div>
         </div>
       </div>
@@ -32,7 +40,7 @@ const RootLayout = () => {
     <Fragment>
       <MainNavigation />
       <main style={{ padding: '0.5%' }}>
-        {location.pathname === '/' ? <Home00WeBSVmenu /> : outletReturn}
+        {pathname === '/' ? <Home00WeBSVmenu /> : outletReturn}
       </main>
     </Fragment>
   );
