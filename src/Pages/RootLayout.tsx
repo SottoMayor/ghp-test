@@ -10,7 +10,11 @@ const RootLayout = () => {
   let { pathname } = useLocation();
 
   useEffect(() => {
+    console.log('OIIIII');
+
+    console.log(window.location.pathname, window.location.origin);
     if (window.location.pathname === '/ghp-test') {
+      console.log('BELE')
       window.location.href =`${window.location.origin}`;
     }
   }, []);
