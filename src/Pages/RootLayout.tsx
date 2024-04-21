@@ -1,21 +1,21 @@
 
 
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment } from 'react';
 import MainNavigation from '../components/MainNavigation';
-import { Outlet, useLocation, useNavigate } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import Home00WeBSVmenu from './Home00WeBSVmenu';
 import ImgProj from '../../public/img_proj.png';
 
 const RootLayout = () => {
   let { pathname } = useLocation();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  useEffect(() => {
-    if(pathname === '/ghp-test'){
-      navigate('/');
-      return;
-    }
-  }, [pathname, navigate]);
+  // useEffect(() => {
+  //   if(pathname === '/ghp-test'){
+  //     navigate('/');
+  //     return;
+  //   }
+  // }, [pathname, navigate]);
 
 
   const outletReturn = (
