@@ -19,7 +19,7 @@ import RootLayout from './Pages/RootLayout';
 function App() {
 
   const routesDef = createRoutesFromElements(
-    <Route element={<RootLayout/>} path='/'>
+    <Route element={<RootLayout/>}>
       <Route path='/' element={<Home00WeBSVmenu />}/>
       <Route path='/access' element={<Home passedData=''/>}/>
       <Route path='/send-sats' element={<Page01TX />}/>
@@ -33,11 +33,10 @@ function App() {
       <Route path='/smart-ordinals/market/buy' element={<Page19TokenBuy/>}/>
       <Route path='/smart-ordinals/market/details' element={<Page03Read passedData={'OLock'}/>}/>
       <Route path='/*' element={<NotFound/>}/>
-      
     </Route>
   )
 
-  const router = createBrowserRouter(routesDef);
+  const router = createBrowserRouter(routesDef, { basename: '/ghp-test' });
 
   return (
 
