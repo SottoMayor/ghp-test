@@ -1,6 +1,6 @@
 
 
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import MainNavigation from '../components/MainNavigation';
 import { Outlet, useLocation } from 'react-router-dom';
 import Home00WeBSVmenu from './Home00WeBSVmenu';
@@ -8,6 +8,12 @@ import ImgProj from '../../public/img_proj.png';
 
 const RootLayout = () => {
   let { pathname } = useLocation();
+
+  useEffect(() => {
+    if (window.location.pathname === '/ghp-test') {
+      window.location.href =`${window.location.origin}`;
+    }
+  }, []);
 
   const outletReturn = (
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap' }}>
