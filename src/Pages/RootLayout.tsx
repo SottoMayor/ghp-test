@@ -41,7 +41,7 @@ const RootLayout = () => {
     <Fragment>
       <MainNavigation />
       <main style={{ padding: '0.5%' }}>
-        {pathname === '/' ? <Home00WeBSVmenu /> : outletReturn}
+        {pathname === '/ghp-test' ? <Home00WeBSVmenu /> : outletReturn}
       </main>
     </Fragment>
   );
