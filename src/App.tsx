@@ -36,7 +36,7 @@ function App() {
     </Route>
   )
 
-  const router = createHashRouter(routesDef, { basename: '/ghp-test' }); 
+  const router = createHashRouter(routesDef, { basename: '/ghp-test' });
 
   return (
 
