@@ -36,7 +36,7 @@ function App() {
     </Route>
   )
 
-  const router = createBrowserRouter(routesDef, { basename: '/ghp-test' });
+  const router = createBrowserRouter(routesDef, { basename: '/ghp-test' }); 
 
   return (
 
