@@ -1,4 +1,4 @@
-import { Route, createRoutesFromElements, RouterProvider, createHashRouter } from 'react-router-dom';
+import { Route, createRoutesFromElements, RouterProvider, createBrowseRouter } from 'react-router-dom';
 
 import Home from './Pages/Home';
 import Home00WeBSVmenu from './Pages/Home00WeBSVmenu';
@@ -36,7 +36,7 @@ function App() {
     </Route>
   )
 
-  const router = createHashRouter(routesDef, { basename: '/ghp-test' });
+  const router = createBrowseRouter(routesDef, { basename: '/ghp-test' });
 
   return (
 
