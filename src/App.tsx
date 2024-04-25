@@ -19,7 +19,7 @@ import { useEffect } from 'react';
 
 function App() {
 
-  console.log(window.location)
+  console.log(window.location, process.env.NODE_ENV)
 
    // Redirect adjusting
    useEffect(() => {
