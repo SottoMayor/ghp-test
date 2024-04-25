@@ -19,6 +19,8 @@ import { useEffect } from 'react';
 
 function App() {
 
+  console.log(window.location)
+
    // Redirect adjusting
    useEffect(() => {
     if(window.location.pathname === '/'){

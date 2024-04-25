@@ -42,7 +42,11 @@ const Home00WeBSVmenu: FC = () => {
           </label>
         </div>
         <div style={{ textAlign: 'center' }}>
-          <img src={Logo} alt="Descrição da imagem" style={{ width: `${imageSize}px`, height: 'auto' }} />
+          <img src={Logo} alt="Descrição da imagem" style={{ width: `${imageSize}px`, height: 'auto' }} 
+          onError={({ currentTarget }) => {
+            currentTarget.onerror = null; // prevents looping
+            currentTarget.src=`${window.location.origin}/ghp-test/${Logo}`;
+          }}/>
         </div>
         <div style={{ textAlign: 'center', paddingTop: '20px', paddingBottom: '20px' }}>
           <label style={{ fontSize: '14px', paddingBottom: '2px' }}>
