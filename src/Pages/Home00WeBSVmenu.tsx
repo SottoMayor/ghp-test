@@ -1,6 +1,7 @@
 import React, { FC, useState, useEffect } from 'react';
 import '../App.css';
 import Logo from '../../public/logo.gif';
+import imagePathHandler from '../utils/imagePathHandler';
 
 const Home00WeBSVmenu: FC = () => {
   const texts = [
@@ -42,7 +43,7 @@ const Home00WeBSVmenu: FC = () => {
           </label>
         </div>
         <div style={{ textAlign: 'center' }}>
-          <img src={Logo} alt="Descrição da imagem" style={{ width: `${imageSize}px`, height: 'auto' }} 
+          <img src={imagePathHandler(Logo)} alt="Descrição da imagem" style={{ width: `${imageSize}px`, height: 'auto' }} 
           onError={({ currentTarget }) => {
             currentTarget.onerror = null; // prevents looping
             currentTarget.src=`${window.location.origin}/ghp-test/${Logo}`;
