@@ -24,7 +24,7 @@ function App() {
    // Redirect adjusting
    useEffect(() => {
     if(window.location.pathname === '/'){
-      window.location.href = `${window.location.origin}/ghp-test`
+      window.location.href = `${window.location.origin}/${process.env.REPOSITORY}`
       return;
     }
   },[])
